@@ -1,0 +1,32 @@
+<div class="overlay">
+    <h1>
+      {{ title | titlecase }}
+    </h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+          <app-quote-form (add)="addedQuote($event)"></app-quote-form>
+        </div>
+        <div class="cards-column col">
+          <img src="https://images.unsplash.com/photo-1584502076720-9f2a039e8ea6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVhZGluZ3xlbnwwfHwwfGJsYWNrfA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+      </div>
+      <div class="container quotes-list">
+        <h3>Quotes List</h3>
+        <div class="all-cards">
+          <div *ngFor="let quote of sortQuotes let i= index" class="card" style="width: 400px;"  >
+            <div class="card-body">
+              <h3 class="card-title" appHighlightQoute >{{quote.title}}</h3>
+              <p class="card-text" id="param">{{quote.quote}}</p>
+              <app-author-detail *ngIf='quote.showInfo' bind-quoted='quote' (isRead)='quoteDelete($event,i)'></app-author-detail>
+              <span class="card-subtitle mb-2">Submitted by: <span id="name">{{quote.name}} </span><span id="date">On: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
+             
+            </div>
+            <button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >More Quote details</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+  </div>
