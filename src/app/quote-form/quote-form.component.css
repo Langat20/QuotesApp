@@ -1,0 +1,18 @@
+.form-group label {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+}
+form button {
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 30px;
+    background-color: orange;
+}
+h2{
+    color: orange;
+    font-size: 40px;
+}
