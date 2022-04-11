@@ -10,9 +10,9 @@ form button {
     height: 40px;
     font-size: 17px;
     border-radius: 30px;
-    background-color: orange;
+    background-color: rgb(93, 103, 236);
 }
 h2{
-    color: orange;
+    color: rgb(238, 87, 27);
     font-size: 40px;
 }

@@ -7,7 +7,7 @@ import {Quote} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  title = 'Best Inspirational Quotes';
+  title = ' Inspirational Quotes';
   quotes:Quote[] = [
     new Quote (1,'Ayzaq','Life hacks','Life is what happens when you’re busy making other plans.','Dalai Lama', new Date(2022,3,24),0,0),
     new Quote (2,'Shee','Auccess in life','Many of life’s failures are people who did not realize how close they were to success when they gave up.','John Lennon',new Date(2020,8,2),0,0),
